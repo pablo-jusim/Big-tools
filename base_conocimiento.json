@@ -1,0 +1,145 @@
+[
+  {
+    "id": "F001",
+    "falla": "El motor no arranca y solo se escucha un 'clic'",
+    "componente": "Sistema de arranque eléctrico",
+    "dificultad": "Baja",
+    "sintomas": [
+      "El motor no gira al intentar encenderlo",
+      "Se escucha un solo 'clic' o varios clics débiles",
+      "Las luces del tablero se atenúan al intentar arrancar",
+      "Los faros tienen poca intensidad"
+    ],
+    "causas": [
+      "Batería descargada o defectuosa",
+      "Terminales de batería sucios o flojos",
+      "Falla del solenoide del motor de arranque",
+      "Motor de arranque dañado"
+    ],
+    "diagnostico": [
+      "Encender los faros: si están débiles, la batería puede estar descargada",
+      "Verificar terminales de batería: deben estar limpios y firmes",
+      "Medir voltaje de batería (debe ser >12.4V)",
+      "Probar arranque con puente: si arranca, la batería es el problema"
+    ],
+    "soluciones": [
+      "Cargar o reemplazar la batería",
+      "Limpiar y ajustar los terminales de batería",
+      "Revisar o reemplazar el motor de arranque o el solenoide"
+    ]
+  },
+  {
+    "id": "F002",
+    "falla": "El motor se sobrecalienta",
+    "componente": "Sistema de refrigeración",
+    "dificultad": "Media",
+    "sintomas": [
+      "Temperatura del motor en zona roja",
+      "Luz de advertencia de temperatura encendida",
+      "Vapor o humo blanco desde el capó",
+      "Olor dulce (refrigerante)",
+      "Pérdida de potencia"
+    ],
+    "causas": [
+      "Nivel bajo de refrigerante",
+      "Termostato atascado cerrado",
+      "Electroventilador no funciona",
+      "Radiador obstruido o sucio"
+    ],
+    "diagnostico": [
+      "Verificar nivel de refrigerante en el depósito",
+      "Comprobar funcionamiento del ventilador con motor caliente",
+      "Revisar la manguera del radiador: debe estar caliente con el motor en marcha",
+      "Buscar fugas visibles"
+    ],
+    "soluciones": [
+      "Rellenar con refrigerante adecuado",
+      "Cambiar termostato",
+      "Revisar fusibles y relés del ventilador",
+      "Limpiar o reemplazar el radiador"
+    ]
+  },
+  {
+    "id": "F003",
+    "falla": "El motor vibra en ralentí",
+    "componente": "Sistema de ignición y admisión",
+    "dificultad": "Media",
+    "sintomas": [
+      "Vibraciones al estar detenido",
+      "RPM inestables",
+      "Luz 'Check Engine' encendida"
+    ],
+    "causas": [
+      "Bujías sucias o gastadas",
+      "Bobina de encendido defectuosa",
+      "Filtro de aire sucio",
+      "Cuerpo de aceleración sucio"
+    ],
+    "diagnostico": [
+      "Revisar estado del filtro de aire",
+      "Inspeccionar bujías",
+      "Escanear códigos OBD2 (por ejemplo: P0301 – Falla de encendido en cilindro 1)"
+    ],
+    "soluciones": [
+      "Cambiar bujías y filtro de aire",
+      "Limpiar cuerpo de aceleración",
+      "Reemplazar bobina si es necesario"
+    ]
+  },
+  {
+    "id": "F004",
+    "falla": "El vehículo pierde potencia al acelerar",
+    "componente": "Sistema de combustible y admisión",
+    "dificultad": "Alta",
+    "sintomas": [
+      "El vehículo acelera con lentitud",
+      "El motor ratea o se apaga al acelerar",
+      "La luz 'Check Engine' puede estar encendida"
+    ],
+    "causas": [
+      "Filtro de combustible obstruido",
+      "Bomba de combustible débil",
+      "Sensor MAF sucio o defectuoso",
+      "Catalizador obstruido"
+    ],
+    "diagnostico": [
+      "Medir presión de combustible en el riel de inyección",
+      "Probar respuesta del sensor MAF con multímetro o escáner",
+      "Desconectar temporalmente el escape para verificar obstrucción"
+    ],
+    "soluciones": [
+      "Reemplazar filtro de combustible",
+      "Probar y reemplazar bomba de combustible si es necesario",
+      "Limpiar o reemplazar sensor MAF",
+      "Revisar el catalizador"
+    ]
+  },
+  {
+    "id": "F005",
+    "falla": "El motor emite humo negro",
+    "componente": "Sistema de combustión y admisión",
+    "dificultad": "Alta",
+    "sintomas": [
+      "Humo negro por el escape",
+      "Olor fuerte a combustible sin quemar",
+      "Aumento del consumo de combustible"
+    ],
+    "causas": [
+      "Inyectores con fugas o sucios",
+      "Sensor de oxígeno defectuoso",
+      "Filtro de aire extremadamente sucio",
+      "Presión de combustible demasiado alta"
+    ],
+    "diagnostico": [
+      "Revisar filtro de aire y reemplazar si está sucio",
+      "Medir presión de combustible",
+      "Escanear códigos relacionados con mezcla rica (P0172, P0175)"
+    ],
+    "soluciones": [
+      "Limpiar o reemplazar inyectores",
+      "Reemplazar sensor de oxígeno",
+      "Revisar regulador de presión de combustible"
+    ]
+  }
+]
+// a
