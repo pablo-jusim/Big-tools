@@ -1,0 +1,274 @@
+{
+  "mapeo_palabras_clave": {
+    "no_enciende_nada": ["enciende", "arranca", "muerta", "prende", "funciona", "nada"],
+    "luz_indicadora": ["luz", "piloto", "indicador", "led"],
+    "luz_bomba": ["bomba"],
+    "luz_motor": ["motor"],
+    "luz_giro": ["giro", "flechas", "dirección"],
+    "luz_quemador": ["quemador", "avería", "llama"],
+    "luz_revision": ["revisión", "mantenimiento", "llave"],
+    "luz_combustible": ["combustible", "gasoil", "diesel", "surtidor"],
+    "luz_cuidado": ["cuidado", "sistema", "anticalcáreo", "rm"],
+    "parpadea": ["parpadea", "titila", "intermitente"],
+    "fija": ["fija", "encendida"],
+    "frecuencia_1": ["una vez", "un parpadeo"],
+    "frecuencia_2": ["dos veces", "dos parpadeos", "doble"],
+    "frecuencia_3": ["tres veces", "tres parpadeos", "triple"],
+    "frecuencia_4": ["cuatro veces", "cuatro parpadeos"],
+    "sin_presion": ["presión", "fuerza", "débil", "potencia", "tira"],
+    "flujo_irregular": ["irregular", "escupiera", "aire", "escupitajos", "cortado"],
+    "regulador_en_minimo": ["mínimo", "regulador", "baja"],
+    "tamiz_agua_sucio": ["tamiz", "filtro de entrada", "filtro agua"],
+    "filtro_fino_sucio": ["filtro fino", "filtro bomba"],
+    "suministro_agua_escaso": ["suministro", "caudal", "grifo", "manguera doblada"],
+    "gotea_abajo": ["gotea", "pierde", "fuga", "abajo", "pierde agua"],
+    "ciclos_cortos": ["corta", "para y arranca", "enciende y apaga solo"],
+    "no_detergente": ["detergente", "jabón", "succiona", "chupa"],
+    "filtro_detergente_sucio": ["filtro detergente", "filtro jabón"],
+    "valvula_retencion_pegada": ["válvula"],
+    "no_calienta": ["calienta", "caliente", "tibia", "fría", "fuego"],
+    "sin_combustible": ["combustible", "gasoil", "diesel"],
+    "sin_producto_cuidado": ["producto", "líquido", "anticalcáreo", "cuidado"],
+    "filtro_combustible_sucio": ["filtro combustible", "filtro gasoil"],
+    "sin_chispa": ["chispa", "encendido"],
+    "temperatura_baja": ["temperatura", "poco caliente", "tibia"],
+    "presion_caudal_maximo": ["máxima presión", "máximo caudal"],
+    "exceso_hollin": ["hollín", "humo negro", "humo oscuro"]
+  },
+  "fallas": [
+    {
+      "nombre": "Sin tensión de red",
+      "solucion": "Verificar la conexión de red y el cable de alimentación.",
+      "referencia": "ES-8",
+      "atributos": ["no_enciende_nada"]
+    },
+    {
+      "nombre": "Fuga en el sistema de alta presión (Indicador de Bomba)",
+      "solucion": "Verificar la estanqueidad del sistema de alta presión y sus conexiones.",
+      "referencia": "ES-7",
+      "atributos": ["luz_indicadora", "luz_bomba", "parpadea", "frecuencia_2"]
+    },
+    {
+      "nombre": "Falta de agua (Indicador de Bomba)",
+      "solucion": "Comprobar la conexión de agua, que el grifo esté abierto y que las tuberías no estén obstruidas.",
+      "referencia": "ES-7",
+      "atributos": ["luz_indicadora", "luz_bomba", "parpadea", "frecuencia_3"]
+    },
+    {
+      "nombre": "Interruptor de láminas pegado en dispositivo de seguridad",
+      "solucion": "Comprobar el dispositivo de seguridad contra el funcionamiento en seco.",
+      "referencia": "ES-7",
+      "atributos": ["luz_indicadora", "luz_bomba", "parpadea", "frecuencia_4"]
+    },
+    {
+      "nombre": "Polos del enchufe invertidos",
+      "solucion": "Invertir los polos en el enchufe del aparato.",
+      "referencia": "ES-7",
+      "atributos": ["luz_indicadora", "luz_giro", "parpadea"]
+    },
+    {
+      "nombre": "Fallo del relé del motor",
+      "solucion": "Ponga el interruptor en '0/OFF' y vuelva a conectarlo. Si el error se repite, avisar al servicio técnico.",
+      "referencia": "ES-7",
+      "atributos": ["luz_indicadora", "luz_motor", "parpadea", "frecuencia_1"]
+    },
+    {
+      "nombre": "Motor sobrecargado o sobrecalentado",
+      "solucion": "Ponga el interruptor en '0/OFF', deje enfriar el aparato y vuelva a conectarlo. Si el error se repite, avisar al servicio técnico.",
+      "referencia": "ES-7",
+      "atributos": ["luz_indicadora", "luz_motor", "parpadea", "frecuencia_2"]
+    },
+    {
+      "nombre": "Fallo en la alimentación de tensión del motor",
+      "solucion": "Comprobar el cable de conexión y los fusibles de la red eléctrica.",
+      "referencia": "ES-7",
+      "atributos": ["luz_indicadora", "luz_motor", "parpadea", "frecuencia_3"]
+    },
+    {
+      "nombre": "Consumo de corriente del motor demasiado alto",
+      "solucion": "Comprobar el cable de conexión, los fusibles de red y avisar al servicio técnico.",
+      "referencia": "ES-7",
+      "atributos": ["luz_indicadora", "luz_motor", "parpadea", "frecuencia_4"]
+    },
+    {
+      "nombre": "Limitador de temperatura de gases de escape activado",
+      "solucion": "Ponga el interruptor en '0/OFF', deje enfriar el aparato y vuelva a conectarlo. Si el error se repite, avisar al servicio técnico.",
+      "referencia": "ES-8",
+      "atributos": ["luz_indicadora", "luz_quemador", "parpadea", "frecuencia_1"]
+    },
+    {
+      "nombre": "Detector de llamas apagó el quemador",
+      "solucion": "Avisar al servicio técnico.",
+      "referencia": "ES-8",
+      "atributos": ["luz_indicadora", "luz_quemador", "parpadea", "frecuencia_2"]
+    },
+    {
+      "nombre": "Detector del producto de cuidado defectuoso",
+      "solucion": "Avisar al servicio técnico.",
+      "referencia": "ES-8",
+      "atributos": ["luz_indicadora", "luz_quemador", "parpadea", "frecuencia_3"]
+    },
+    {
+      "nombre": "Sensor de temperatura del quemador defectuoso",
+      "solucion": "Avisar al servicio técnico.",
+      "referencia": "ES-8",
+      "atributos": ["luz_indicadora", "luz_quemador", "parpadea", "frecuencia_4"]
+    },
+    {
+      "nombre": "Intervalo de mantenimiento requerido",
+      "solucion": "Ejecutar los trabajos de revisión y mantenimiento recomendados.",
+      "referencia": "ES-8",
+      "atributos": ["luz_indicadora", "luz_revision", "fija"]
+    },
+    {
+      "nombre": "Depósito de combustible vacío (Indicador)",
+      "solucion": "Llenar el depósito con gasóleo o fuel ligero.",
+      "referencia": "ES-8",
+      "atributos": ["luz_indicadora", "luz_combustible", "fija"]
+    },
+    {
+      "nombre": "Depósito de producto de cuidado casi vacío",
+      "solucion": "Rellenar el producto de mantenimiento. El quemador seguirá funcionando por 5 horas más.",
+      "referencia": "ES-8",
+      "atributos": ["luz_indicadora", "luz_cuidado", "fija"]
+    },
+    {
+      "nombre": "Depósito de producto de cuidado vacío (Quemador bloqueado)",
+      "solucion": "Rellenar el producto de mantenimiento para desbloquear el quemador.",
+      "referencia": "ES-8",
+      "atributos": ["luz_indicadora", "luz_cuidado", "parpadea"]
+    },
+    {
+      "nombre": "Aire en el sistema de la bomba",
+      "solucion": "Purgar la bomba: Con la pistola pulverizadora abierta, conecte y desconecte el aparato varias veces con el interruptor principal.",
+      "referencia": "ES-8",
+      "atributos": ["sin_presion", "flujo_irregular"]
+    },
+    {
+      "nombre": "Presión ajustada al mínimo",
+      "solucion": "Ajuste el regulador de presión/caudal a MAX.",
+      "referencia": "ES-8",
+      "atributos": ["sin_presion", "regulador_en_minimo"]
+    },
+    {
+      "nombre": "Tamiz de conexión de agua sucio",
+      "solucion": "Limpie el tamiz (filtro) en la conexión de entrada de agua.",
+      "referencia": "ES-8",
+      "atributos": ["sin_presion", "tamiz_agua_sucio"]
+    },
+    {
+      "nombre": "Filtro de depuración fina sucio",
+      "solucion": "Limpie el filtro de depuración fina. Si es necesario, cámbielo.",
+      "referencia": "ES-8",
+      "atributos": ["sin_presion", "filtro_fino_sucio"]
+    },
+    {
+      "nombre": "Abastecimiento de agua escaso",
+      "solucion": "Verifique que la manguera de alimentación de agua tenga el caudal suficiente y no esté doblada.",
+      "referencia": "ES-8",
+      "atributos": ["sin_presion", "suministro_agua_escaso"]
+    },
+    {
+      "nombre": "Bomba no estanca",
+      "solucion": "Se permiten hasta 3 gotas por minuto. Si la fuga es mayor, el servicio técnico debe revisar el aparato.",
+      "referencia": "ES-8",
+      "atributos": ["gotea_abajo"]
+    },
+    {
+      "nombre": "Fuga en sistema de alta presión (Ciclos cortos)",
+      "solucion": "Verificar la estanqueidad del sistema de alta presión y las conexiones, incluyendo manguera y pistola.",
+      "referencia": "ES-8",
+      "atributos": ["ciclos_cortos"]
+    },
+    {
+      "nombre": "Filtro de detergente sucio",
+      "solucion": "Limpie el filtro que se encuentra en el extremo de la manguera de aspiración de detergente.",
+      "referencia": "ES-8",
+      "atributos": ["no_detergente", "filtro_detergente_sucio"]
+    },
+    {
+      "nombre": "Válvula de retención de detergente pegada",
+      "solucion": "Desmonte la manguera de detergente y suelte la válvula de retención con un objeto obtuso (sin punta).",
+      "referencia": "ES-8",
+      "atributos": ["no_detergente", "valvula_retencion_pegada"]
+    },
+    {
+      "nombre": "Quemador no enciende por falta de combustible",
+      "solucion": "Llenar el depósito con el combustible adecuado (gasóleo o fuel ligero).",
+      "referencia": "ES-8",
+      "atributos": ["no_calienta", "sin_combustible"]
+    },
+    {
+      "nombre": "Quemador no enciende por falta de producto de cuidado",
+      "solucion": "Rellenar el depósito del producto de mantenimiento del sistema.",
+      "referencia": "ES-8",
+      "atributos": ["no_calienta", "sin_producto_cuidado"]
+    },
+    {
+      "nombre": "Quemador no enciende por falta de agua",
+      "solucion": "Comprobar el suministro de agua y limpiar el tamiz en el dispositivo de seguridad contra el funcionamiento en seco.",
+      "referencia": "ES-8",
+      "atributos": ["no_calienta", "suministro_agua_escaso"]
+    },
+    {
+      "nombre": "Filtro de combustible sucio",
+      "solucion": "Cambie el filtro de combustible.",
+      "referencia": "ES-8",
+      "atributos": ["no_calienta", "filtro_combustible_sucio"]
+    },
+    {
+      "nombre": "Sin chispa de encendido",
+      "solucion": "Si al mirar por la mirilla no se ve ninguna chispa de encendido, el aparato debe ser revisado por el servicio técnico.",
+      "referencia": "ES-8",
+      "atributos": ["no_calienta", "sin_chispa"]
+    },
+    {
+      "nombre": "Temperatura no se alcanza por presión/caudal excesivos",
+      "solucion": "Reducir la presión de trabajo y el caudal en el regulador de la unidad de bomba.",
+      "referencia": "ES-9",
+      "atributos": ["temperatura_baja", "presion_caudal_maximo"]
+    },
+    {
+      "nombre": "Serpentín de recalentamiento con hollín",
+      "solucion": "El aparato deberá ser deshollinado por el servicio técnico.",
+      "referencia": "ES-9",
+      "atributos": ["temperatura_baja", "exceso_hollin"]
+    }
+  ],
+  "preguntas": {
+    "no_enciende_nada": "¿El aparato no da ninguna señal de vida al accionarlo (ni luces, ni ruidos)?",
+    "luz_indicadora": "Observando el panel, ¿hay alguna luz o piloto indicador encendido o parpadeando?",
+    "luz_bomba": "¿La luz que ve corresponde al símbolo de la bomba?",
+    "luz_motor": "¿La luz que ve corresponde al símbolo del motor?",
+    "luz_giro": "¿La luz que ve corresponde al símbolo de dirección de giro (flechas)?",
+    "luz_quemador": "¿La luz que ve corresponde al símbolo de avería en el quemador (llama con llave inglesa)?",
+    "luz_revision": "¿La luz que ve corresponde al símbolo de revisión/mantenimiento (llave inglesa)?",
+    "luz_combustible": "¿La luz que ve corresponde al símbolo del surtidor de combustible?",
+    "luz_cuidado": "¿La luz que ve corresponde al símbolo del producto de cuidado del sistema (RM 110/111)?",
+    "parpadea": "¿La luz está parpadeando?",
+    "fija": "¿La luz está encendida de forma fija, sin parpadear?",
+    "frecuencia_1": "¿La luz parpadea una sola vez de forma repetida?",
+    "frecuencia_2": "¿La luz parpadea dos veces seguidas y hace una pausa?",
+    "frecuencia_3": "¿La luz parpadea tres veces seguidas y hace una pausa?",
+    "frecuencia_4": "¿La luz parpadea cuatro veces seguidas y hace una pausa?",
+    "sin_presion": "Independientemente de las luces, ¿el principal problema es que el agua sale con poca fuerza o sin presión?",
+    "flujo_irregular": "Al accionar la pistola, ¿el flujo de agua es irregular, como si 'escupiera' aire?",
+    "regulador_en_minimo": "¿Ha verificado que el regulador de presión/caudal no esté ajustado en la posición de mínimo?",
+    "tamiz_agua_sucio": "¿Ha revisado y limpiado el pequeño filtro (tamiz) que se encuentra justo en la entrada de agua de la máquina?",
+    "filtro_fino_sucio": "¿Ha revisado el filtro de depuración fina que se encuentra en la unidad de bomba?",
+    "suministro_agua_escaso": "¿Ha confirmado que la manguera que suministra agua a la máquina tiene buen caudal y no está doblada o parcialmente cerrada?",
+    "gotea_abajo": "¿El problema es que observa un goteo de agua por debajo de la carcasa de la máquina?",
+    "ciclos_cortos": "Con la máquina encendida pero sin apretar el gatillo de la pistola, ¿el motor se enciende y se apaga solo a intervalos cortos?",
+    "no_detergente": "¿El problema principal es que la máquina no succiona el detergente o jabón?",
+    "filtro_detergente_sucio": "¿Ha revisado y limpiado el filtro que está en el extremo de la manguera de succión de detergente?",
+    "valvula_retencion_pegada": "¿Ha intentado soltar la válvula de retención del detergente (donde se conecta la manguera) usando un objeto sin punta?",
+    "no_calienta": "¿El problema principal es que el agua no sale caliente?",
+    "sin_combustible": "¿Ha verificado que el depósito de combustible tiene gasóleo o diésel?",
+    "sin_producto_cuidado": "¿Ha verificado que el depósito del producto de cuidado del sistema (anticalcáreo) tiene líquido?",
+    "filtro_combustible_sucio": "¿Ha revisado si el filtro de combustible está sucio u obstruido?",
+    "sin_chispa": "Si mira por la mirilla del quemador mientras intenta arrancar, ¿puede confirmar que NO se ve ninguna chispa de encendido?",
+    "temperatura_baja": "El agua sí calienta, pero ¿no alcanza la temperatura máxima que solía alcanzar?",
+    "presion_caudal_maximo": "¿Está intentando calentar el agua mientras opera con la máxima presión y caudal posibles?",
+    "exceso_hollin": "¿Nota si por el escape de la máquina sale humo más oscuro de lo normal o con partículas de hollín?"
+  }
+}
